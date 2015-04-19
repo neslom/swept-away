@@ -1,12 +1,23 @@
-<div class="first-box">
-  <h1 id="title">Swept Away</h1>
+<div class="scroll-on-page">
 
-  <%= render "refills/flex_boxes" %>
+  <article>
+    <section>
+      <div class="first-box">
+        <h1 id="title">Swept Away</h1>
 
-  <div class="input">
-    <%= form_for "address" do |f| %>
-      <%= f.text_field :address %>
-    <%= f.submit "cool" %>
-  <% end %>
-  </div>
+        <%= render "refills/flex_boxes" %>
+
+        <div class="input">
+          <%= form_for "address" do |f| %>
+            <%= f.text_field :address, placeholder: "E.x. 1000 N Main St, Denver, CO" %>
+          <%= f.submit "cool" %>
+        <% end %>
+        </div>
+      </div>
+    </section>
+    <% 50.times do %>
+      <br>
+    <% end %>
+  </article>
+
 </div>
