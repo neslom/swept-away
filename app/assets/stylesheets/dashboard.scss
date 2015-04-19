@@ -2,7 +2,7 @@ body {
   background-color: $medium-gray;
 }
 
-navbar {
- @include outer-container;
- @include span-columns(12);
+#title {
+  text-align: center;
+  font-size: 7em;
 }
