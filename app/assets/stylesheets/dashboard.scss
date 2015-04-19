@@ -2,7 +2,20 @@ body {
   background-color: $medium-gray;
 }
 
-#title {
+.first-box {
+  @include outer-container;
   text-align: center;
+}
+
+#title {
   font-size: 7em;
+}
+
+.input {
+  @include span-columns(6);
+  float: center;
+  display: inline-block;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }

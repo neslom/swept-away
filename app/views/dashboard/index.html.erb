@@ -1,1 +1,12 @@
-<h1 id="title">Swept Away</h1>
+<div class="first-box">
+  <h1 id="title">Swept Away</h1>
+
+  <%= render "refills/flex_boxes" %>
+
+  <div class="input">
+    <%= form_for "address" do |f| %>
+      <%= f.text_field :address %>
+    <%= f.submit "cool" %>
+  <% end %>
+  </div>
+</div>
