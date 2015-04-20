@@ -1,17 +1,7 @@
-language: ruby
-cache: bundler
-rvm:
-  - 2.1.5
-env:
-  - DB=postgresql
-script:
-  - bundle exec rspec spec/
-before_script:
-  - psql -c 'create database my_app_test' -U postgres
 deploy:
   provider: heroku
   api_key:
-    secure: eZdRtp4eHUqmybR+v4Yc9+Ah2vjOT6bwdou9DFptmQ5K4EOHrBOPFle3lrIGj6sKkFuSS7hDC4vRjcG5CugaH4dpF/K757Rx+vhOkhoLKMEcDwYLGU49iAB7HjDBRrLgd2v7LNoRMRq8olZFow8xPxzkwXdrPdpZ6Fow0HNphh4=
-    app: salty-stream-5695
-    on:
-      repo: neslom/swept-away
+    secure: jm2OXj+D1DSBSfqPvMJpeIVUnxOsqe0laH7Lcs6EYCEjVqjzySlqwTPLrUynHhtwdA5LIUjJyOYH+LXLfb8hnxe1PSdmrZNlgBGBmSMvBLwbkPkNtz2Y1ZLUSLkqP7vnIgMHnn1X9AhCMbKxekKCvZAEm096vLyX223t79LasBA=
+  app: salty-stream-5695
+  on:
+    repo: neslom/swept-away
