@@ -11,8 +11,7 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: JTrzwLdoCG7Pu2inMm9nMjlG7/QSznaL182xBnCM/pxIo3eqt8IxejdR7kqeVWoW5dTlKEz3NX7Q9jh/ludUZV9FWEvDM2hqDADWH2yEHWXzkBg7eIjAhJqT/FGBs0BgeWlcetgXZIPCH4Szw7IpTLTKPKRw5Fhn1/rTKJPEvcY=
-    run: "rake db:migrate"
+    secure: eZdRtp4eHUqmybR+v4Yc9+Ah2vjOT6bwdou9DFptmQ5K4EOHrBOPFle3lrIGj6sKkFuSS7hDC4vRjcG5CugaH4dpF/K757Rx+vhOkhoLKMEcDwYLGU49iAB7HjDBRrLgd2v7LNoRMRq8olZFow8xPxzkwXdrPdpZ6Fow0HNphh4=
     app: salty-stream-5695
     on:
       repo: neslom/swept-away
