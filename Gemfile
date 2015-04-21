@@ -15,6 +15,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'

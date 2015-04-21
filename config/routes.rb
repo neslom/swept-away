@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get '/', to: "dashboard#index"
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/', to: 'dashboard#index'
 end
