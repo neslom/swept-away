@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'
