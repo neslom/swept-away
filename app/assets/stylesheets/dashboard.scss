@@ -2,20 +2,39 @@ body {
   background-color: $medium-gray;
 }
 
-.first-box {
+.main-box {
   @include outer-container;
   text-align: center;
+}
+
+section {
+  height: 100vh;
 }
 
 #title {
   font-size: 7em;
 }
 
-.input {
+#twitter {
+  content: url('sign-in-with-twitter-link.png');
+}
+
+.first-input {
   @include span-columns(6);
   float: center;
   display: inline-block;
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0 auto;
+}
+
+.second-input {
+  @include span-columns(6);
+  float: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.form {
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
