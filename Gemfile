@@ -24,6 +24,8 @@ group :development, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do
