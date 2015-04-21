@@ -1,7 +1,17 @@
+language: ruby
+cache: bundler
+env:
+- DB=postgresql
+script:
+- RAILS_ENV=test bundle exec rake db:test:prepare --trace
+- bundle exec rspec spec/
+before_script:
+- psql -c 'create database my_app_test' -U postgres
 deploy:
   provider: heroku
   api_key:
     secure: jm2OXj+D1DSBSfqPvMJpeIVUnxOsqe0laH7Lcs6EYCEjVqjzySlqwTPLrUynHhtwdA5LIUjJyOYH+LXLfb8hnxe1PSdmrZNlgBGBmSMvBLwbkPkNtz2Y1ZLUSLkqP7vnIgMHnn1X9AhCMbKxekKCvZAEm096vLyX223t79LasBA=
+  run: "rake db:migrate"
   app: salty-stream-5695
   on:
     repo: neslom/swept-away
