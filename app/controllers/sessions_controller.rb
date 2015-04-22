@@ -5,11 +5,13 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
     end
+    flash[:notice] = "Welcome!"
     redirect_to root_path
   end
 
   def destroy
     reset_session
+    flash[:notice] = "Goodbye!"
     redirect_to root_path
   end
 
