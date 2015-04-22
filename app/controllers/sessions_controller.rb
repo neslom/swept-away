@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  after_filter :prepare_unobtrusive_flash
+
   def create
     user = User.find_or_create_from_auth(auth_hash)
 

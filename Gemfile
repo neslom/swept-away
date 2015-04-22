@@ -17,6 +17,7 @@ gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
+gem 'unobtrusive_flash', '>=3'
 
 group :development, :test do
   gem 'byebug'
