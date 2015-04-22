@@ -1,0 +1,4 @@
+<%= bootstrap_form_for(:location) do |f| %>
+  <%= f.select :ward, ward_selector, { prompt: "Select your ward" } %>
+  <%= f.submit "Submit" %>
+<% end %>

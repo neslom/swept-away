@@ -19,6 +19,7 @@ gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'faraday'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug'
