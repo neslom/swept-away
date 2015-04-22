@@ -18,6 +18,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'unobtrusive_flash', '>=3'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug'
