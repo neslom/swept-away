@@ -8,7 +8,6 @@ RSpec.feature "user logs in via omniauth" do
 
   before(:each) do
     Capybara.default_host = "http://localhost:3000"
-
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
       uid: "123456789",
@@ -29,5 +28,12 @@ RSpec.feature "user logs in via omniauth" do
 
     expect(page).to have_link("Logout")
     expect(User.count).to eq(1)
+  end
+
+  scenario "user logs out" do
+    login_with_oauth
+    click_link_or_button("Logout")
+
+    expect(page).to have_content("Sign in with Twitter")
   end
 end
