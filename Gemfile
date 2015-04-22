@@ -28,6 +28,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do
