@@ -1,14 +1,10 @@
-/* -- custom css for Bootstrap 3.x --*/
-
-/* move special fonts to HTML head for better performance */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
 
 $primary-color: #364f59;
 $secondary-color: #55acee;
 $white: #fff;
-$maroon: #515151;
+$dark-gray: #515151;
 
-html,
 body {
   height: 100%;
   width: 100%;
@@ -33,22 +29,7 @@ img.grayscale {
 }
 
 .icon-bar {
-  background-color: $white;
-}
-
-.scroll-down a, .scroll-top a {
-  color:$maroon;
-}
-
-.scroll-down {
-  position:fixed;
-  bottom:20%;
-  right:0%;
-  color:$maroon;
-}
-
-.scroll-top {
-  background-color:$maroon;
+  background-color: red;
 }
 
 .header .btn-lg {
@@ -61,7 +42,7 @@ img.grayscale {
 
 .header .btn-lg:hover {
   background-color:#eeeeee;
-  color:$maroon;
+  color:$dark-gray;
 }
 
 .navbar a {
@@ -74,7 +55,7 @@ img.grayscale {
 }
 
 .navbar-bold li a:hover, .navbar-bold li.active {
-  background-color:$maroon;
+  background-color:$dark-gray;
 }
 
 .vert {
@@ -100,17 +81,6 @@ img.grayscale {
 }
 
 .header {
-  height: 80%;
-  background: $primary-color url('http://www.bootply.com/assets/example/pt_squares_lg.png') repeat center center fixed;
+  height: 95%;
+  background: $primary-color;
 }
-
-.blurb {
-  padding: 120px 0;
-  background-color:#fefefe;
-}
-
-footer {
-  padding: 100px 0;
-}
-
-/* -- end custom css for Bootstrap 3.x --*/
