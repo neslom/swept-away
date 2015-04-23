@@ -1,4 +1,5 @@
-<%= bootstrap_form_for(:location) do |f| %>
-  <%= f.select :ward, ward_selector, { prompt: "Select your ward" } %>
+<%= bootstrap_form_for(StreetSweep.new, remote: true, format: :json) do |f| %>
+  <%= f.select :ward_id, ward_selector, { prompt: "Select your ward" } %>
+  <%= f.select :section, ward_selector, { prompt: "Select your ward" }, style: "display:none" %>
   <%= f.submit "Submit" %>
 <% end %>

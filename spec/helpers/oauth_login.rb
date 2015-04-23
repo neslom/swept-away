@@ -1,5 +1,4 @@
 def login_with_oauth(service = :twitter)
-  Capybara.default_host = "http://localhost:3000"
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
     uid: "123456789",
