@@ -1,5 +1,5 @@
-<%= bootstrap_form_for(StreetSweep.new, remote: true, format: :json) do |f| %>
-  <%= f.select :ward_id, ward_selector, { prompt: "Select your ward" } %>
-  <%= f.select :section, ward_selector, { prompt: "Select your ward" }, style: "display:none" %>
-  <%= f.submit "Submit" %>
+<%= form_tag({ controller: "street_sweeps", action: "search" }, method: "get", class: "form", remote: true) do %>
+  <%= select_tag :ward_id, options_for_select(ward_selector), { prompt: "Select your ward" } %>
+  <%= select_tag :section, nil, { prompt: "Select your section", style: "display: none" } %>
+<%= submit_tag "Submit" %>
 <% end %>

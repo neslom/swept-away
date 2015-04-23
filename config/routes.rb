@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :street_sweeps
+
+  get '/search', to: 'street_sweeps#search'
 end
