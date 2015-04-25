@@ -1,0 +1,9 @@
+<div class="dates">
+  <% if !@dates.nil? %>
+  <h3>The next scheduled street sweeping for your area</h3>
+    <% @dates.each do |date| %>
+    Month:<%= date.month %>
+    Days: <%= date.dates %>
+<% end %>
+<% end %>
+</div>
