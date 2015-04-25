@@ -1,9 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
-
-$primary-color: #364f59;
-$secondary-color: #55acee;
-$white: #fff;
-$dark-gray: #515151;
+@import "variables";
 
 body {
   height: 100%;

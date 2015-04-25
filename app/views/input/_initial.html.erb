@@ -1,4 +1,6 @@
-<%= form_tag({ controller: "street_sweeps", action: "search" }, method: "get", class: "form", remote: true) do %>
-  <%= select_tag :ward_id, options_for_select(ward_selector), { prompt: "Select your ward" } %>
-  <%= select_tag :section, nil, { prompt: "Select your section", style: "display: none" } %>
-<% end %>
+  <%= select_tag :ward_id, options_for_select(ward_selector), { prompt: "Select your ward", class: "btn"} %>
+  <br>
+  <br>
+  <div>
+  <%= select_tag :section, nil, { prompt: "Select your section", style: "display: none", class: "btn" } %>
+  </div>
