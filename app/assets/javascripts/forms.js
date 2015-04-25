@@ -19,8 +19,9 @@ $(document).ready(function() {
       url: "/search",
       data: { ward_id: ward_id, section: section },
       success: function(data) {
-        $(".signup-input").remove();
-        $(".dates").append("<p>" + data + "</p>");
+        $(".signup-input").toggle();
+        $(".dates").append('<h4 id="fading" style="display:none">' + data + '</h4>');
+        $("#fading").delay(800).fadeIn("slow");
       }
     });
   });
