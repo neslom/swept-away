@@ -2,24 +2,13 @@ class StreetSweepsController < ApplicationController
   def search
     respond_to do |format|
       if params[:ward_id] && !params[:section]
-        format.json { render json: sections }
+        format.json { render json: StreetSweep.sections_by_ward(params[:ward_id]) }
       else
-        #format.json { render json: dates }
         format.html do
-          @dates = dates
+          @schedules = StreetSweep.schedules(params[:ward_id], params[:section])
           render "dashboard/show"
         end
       end
     end
-  end
-
-  private
-
-  def sections
-    StreetSweep.where(ward_id: params[:ward_id]).pluck(:section).uniq
-  end
-
-  def dates
-    StreetSweep.where(ward_id: params[:ward_id], section: params[:section])
   end
 end

@@ -32,18 +32,18 @@
       <p class="lead">It's easy to forget about street sweeping. We can remind you.</p>
       <div>&nbsp;</div>
       <div class="signup-input">
-      <% if !current_user %>
-        <a href="/auth/twitter" class="btn btn-block btn-social btn-twitter">
-          <i class="fa fa-twitter"></i>
-          Sign in with Twitter
-        </a>
-      <% else %>
-        <div class="form">
-          <%= render "input/initial" %>
-        </div>
-      <% end %>
+        <% if !current_user %>
+          <a href="/auth/twitter" class="btn btn-block btn-social btn-twitter">
+            <i class="fa fa-twitter"></i>
+            Sign in with Twitter
+          </a>
+        <% else %>
+          <div class="form">
+            <%= render "input/initial" %>
+          </div>
+        <% end %>
       </div>
-          <%= render template: "dashboard/show" %>
+      <%= render template: "dashboard/show" %>
     </div>
   </div>
 </section>
