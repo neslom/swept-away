@@ -2,8 +2,10 @@
   <% if !@schedules.nil? %>
     <h3>Your area's street sweeping schedule:</h3>
     <% @schedules.each do |schedule| %>
-      Month:<%= schedule.month %>
-    Days: <%= schedule.dates %>
-<% end %>
-<% end %>
+      <ul class="dates">
+        <%= schedule.print_months %>
+        <%= schedule.print_days %><br>
+      </ul>
+    <% end %>
+  <% end %>
 </div>
