@@ -3,7 +3,7 @@
     <h3>Your area's street sweeping schedule:</h3>
     <% @schedules.each do |schedule| %>
       <ul class="dates">
-        <%= schedule.print_months %>
+        <%= schedule.print_month %>
         <%= schedule.print_days %><br>
       </ul>
     <% end %>
