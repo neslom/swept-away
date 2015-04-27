@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421013653) do
+ActiveRecord::Schema.define(version: 20150422172153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "street_sweeps", force: :cascade do |t|
+    t.text "ward_id"
+    t.text "dates"
+    t.text "month"
+    t.text "section"
+  end
 
   create_table "users", force: :cascade do |t|
     t.text     "name"

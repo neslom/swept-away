@@ -1,9 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600');
-
-$primary-color: #364f59;
-$secondary-color: #55acee;
-$white: #fff;
-$dark-gray: #515151;
+@import "variables";
 
 body {
   height: 100%;
@@ -38,6 +34,10 @@ img.grayscale {
   padding:15px;
   background-color:transparent;
   color:#ffffff;
+}
+
+.dates {
+  color: $white;
 }
 
 .header .btn-lg:hover {
@@ -81,6 +81,6 @@ img.grayscale {
 }
 
 .header {
-  height: 95%;
+  height: 100%;
   background: $primary-color;
 }

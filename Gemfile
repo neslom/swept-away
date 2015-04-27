@@ -18,6 +18,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-rails'
 gem 'unobtrusive_flash', '>=3'
+gem 'faraday'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug'
@@ -27,6 +29,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
 end
 
 group :production do

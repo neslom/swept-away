@@ -1,0 +1,11 @@
+<div class="dates">
+  <% if !@schedules.nil? %>
+    <h3>Your area's street sweeping schedule:</h3>
+    <% @schedules.each do |schedule| %>
+      <ul class="dates">
+        <%= schedule.print_months %>
+        <%= schedule.print_days %><br>
+      </ul>
+    <% end %>
+  <% end %>
+</div>
