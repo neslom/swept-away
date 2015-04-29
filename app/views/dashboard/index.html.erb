@@ -29,7 +29,9 @@
       <div class="unobtrusive-flash-container">
       </div>
       <h1>Street Sweep</h1>
-      <p class="lead">It's easy to forget about street sweeping. We can remind you.</p>
+      <p class="lead">It's easy to forget about street sweeping. We can remind you.<br>
+        Share your address with us and we'll alert you before your car is swept away too.
+      </p>
       <div>&nbsp;</div>
       <div class="signup-input">
         <% if !current_user %>
@@ -38,9 +40,7 @@
             Sign in with Twitter
           </a>
         <% else %>
-          <div class="form">
-            <%= render "input/initial" %>
-          </div>
+          <i class="fa fa-long-arrow-down fa-5x"></i><br>
         <% end %>
       </div>
       <%= render template: "dashboard/show" %>
