@@ -3,8 +3,12 @@ class StreetSweep < ActiveRecord::Base
     where(ward_id: ward_id).pluck(:section).uniq
   end
 
-  def self.schedules(ward_id, section)
-    where(ward_id: ward_id, section: section)
+  #def self.schedules(ward_id, section)
+    #where(ward_id: ward_id, section: section)
+  #end
+
+  def self.schedules(ward_id)
+    where(ward_id: ward_id)
   end
 
   def print_days

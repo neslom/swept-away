@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("a").click(function(e) {
+  $("a.scroll").click(function(e) {
     var target = $(this).attr('href');
     if (target != "/auth/twitter") {
       e.preventDefault();

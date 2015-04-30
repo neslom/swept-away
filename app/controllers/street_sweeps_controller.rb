@@ -1,4 +1,5 @@
 class StreetSweepsController < ApplicationController
+
   def search
     respond_to do |format|
       if params[:ward_id] && !params[:section]
@@ -10,5 +11,10 @@ class StreetSweepsController < ApplicationController
         end
       end
     end
+  end
+
+  def show
+    @schedules = StreetSweep.find_by(ward_id: params[:id])
+    render "dashboard/show"
   end
 end

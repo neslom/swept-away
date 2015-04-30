@@ -10,8 +10,18 @@ $(document).ready(function() {
     var marker = e.layer;
     var ward = marker.feature.properties.WARD;
 
-    var popupContent = "<a href='#' class='ward-submit'>" + ward + "</a>";
+    var popupContent = "<a href=/street_sweeps/" + ward + " remote='true' class='ward-submit'>" + ward + "</a>";
 
     marker.bindPopup(popupContent);
   });
+
+  //$("#map").on("click", ".ward-submit", function() {
+    //$(".ward-submit").click(function() {
+      //var wardId = $(this).val();
+      //$.ajax({
+        //method: "GET",
+        //url: "street_sweeps/" + wardId
+      //});
+    //});
+  //});
 });
