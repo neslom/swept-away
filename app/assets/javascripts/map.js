@@ -5,4 +5,5 @@ $(document).ready(function() {
 
   map.touchZoom.disable();
   map.scrollWheelZoom.disable();
+
 });
