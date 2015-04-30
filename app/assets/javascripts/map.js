@@ -6,4 +6,7 @@ $(document).ready(function() {
   map.touchZoom.disable();
   map.scrollWheelZoom.disable();
 
+  $(".leaflet-clickable").click(function() {
+    alert("hello");
+  });
 });
