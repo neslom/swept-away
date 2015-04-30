@@ -17,10 +17,9 @@ ActiveRecord::Schema.define(version: 20150422172153) do
   enable_extension "plpgsql"
 
   create_table "street_sweeps", force: :cascade do |t|
-    t.text "ward_id"
+    t.text "ward_section"
     t.text "dates"
     t.text "month"
-    t.text "section"
   end
 
   create_table "users", force: :cascade do |t|
