@@ -14,6 +14,6 @@ RSpec.feature "user logs in via omniauth" do
     login_with_oauth
     click_link_or_button("Logout")
 
-    expect(page).to have_content("Sign in with Twitter")
+    expect(page).to have_content("Sign in")
   end
 end

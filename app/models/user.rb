@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 
     user
   end
+
+  def new_user?
+    Time.now - self.created_at.to_time < 60
+  end
 end

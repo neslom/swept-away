@@ -4,7 +4,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_or_create_from_auth(auth_hash)
 
-    if user
+    if user && user.new_user?
+      session[:user_id] = user.id
+      session[:first_login] = 1
+    elsif user
       session[:user_id] = user.id
     end
     flash[:notice] = "Welcome!"
