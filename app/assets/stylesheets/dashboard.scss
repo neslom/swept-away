@@ -24,38 +24,27 @@ img.grayscale {
   -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
 
-.icon-bar {
-  background-color: red;
-}
-
-.header .btn-lg {
-  font-size:28px;
-  border-color:#eeeeee;
-  padding:15px;
-  background-color:transparent;
-  color:#ffffff;
-}
-
-.dates {
-  color: $white;
-}
-
-.header .btn-lg:hover {
-  background-color:#eeeeee;
-  color:$dark-gray;
-}
 
 .navbar a {
   color:$white;
 }
 
 .navbar-bold {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .navbar-bold li a:hover, .navbar-bold li.active {
-  background-color:$dark-gray;
+  background-color:#FC7022;
+}
+
+#login {
+  color: $white;
+  margin-top: 15px;
+}
+
+.toggle {
+  background: red;
 }
 
 .vert {

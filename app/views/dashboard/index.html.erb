@@ -2,7 +2,7 @@
 <div class="navbar navbar-fixed-top navbar-bold">
   <div class="container">
     <div class="navbar-header">
-      <a href="#top" class="navbar-brand">Home</a>
+      <a href="/" class="navbar-brand scroll">Street Sweep</a>
       <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -14,15 +14,26 @@
         <li><a href="#sec1">Section 1</a></li>
         <li><a href="#sec2">Section 2</a></li>
       </ul>
-      <% if current_user %>
         <ul class="nav navbar-nav navbar-right">
+      <% if current_user %>
           <li class="gravatar"><%= image_tag current_user.image_url, class: "img-square img-thumbnail home-image" %></li>
-          <li id="logout"><%= link_to "Logout", logout_path, method: :delete, class: "navbar-brand" %></li>
-        </ul>
+          <li id="logout"><%= link_to "Logout", logout_path, method: :delete %></li>
+        <% else %>
+          <li id="login"><p>Sign in</p></li>
+          <li>
+            <a href="/auth/twitter" class="btn btn-social-icon btn-sm btn-twitter pull-right">
+            <i class="fa fa-twitter"></i>
+          </a>
+          </li>
       <% end %>
+        </ul>
     </div>
   </div>
 </div>
+
+<section id="map-home">
+  <%= render template: "dashboard/map" %>
+</section>
 
 <section>
   <div class="header vert">
@@ -34,21 +45,9 @@
         Share your address and we'll alert you before your car is swept away too.
       </p>
       <div>&nbsp;</div>
-      <div class="signup-input">
-        <% if !current_user %>
-          <a href="/auth/twitter" class="btn btn-block btn-social btn-twitter">
-            <i class="fa fa-twitter"></i>
-            Sign in with Twitter
-          </a>
-        <% else %>
-          <a href="#map" <i class="fa fa-long-arrow-down fa-5x"></i></a>
-        <% end %>
+        <a href="#map" <i class="fa fa-long-arrow-down fa-5x scroll"></i></a>
       </div>
       <%= render template: "dashboard/show" %>
     </div>
   </div>
-</section>
-
-<section>
-  <%= render template: "dashboard/map" %>
 </section>

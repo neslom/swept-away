@@ -20,6 +20,7 @@ gem 'font-awesome-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'faraday'
 gem 'bootstrap_form'
+gem 'responders'
 
 group :development, :test do
   gem 'byebug'

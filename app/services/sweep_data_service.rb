@@ -9,10 +9,9 @@ class SweepDataService
 
   def populate_table
     json_response.each do |data|
-      StreetSweep.create(ward_id: data["ward"],
+      StreetSweep.create(ward_section: data["ward_section_concatenated"],
                          dates: data["dates"],
-                         month: data["month_number"],
-                         section: data["section"])
+                         month: data["month_number"])
     end
   end
 end
