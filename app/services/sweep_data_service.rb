@@ -11,7 +11,7 @@ class SweepDataService
     json_response.each do |data|
       StreetSweep.create(ward_section: data["ward_section_concatenated"],
                          dates: data["dates"],
-                         month: data["month_number"]
+                         month: data["month_number"])
     end
   end
 end
