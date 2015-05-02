@@ -5,9 +5,9 @@
 }
 
 .gravatar {
-  margin-right: 1em;
-  height: 50px;
-  width: 50px;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
 }
 
 .form {
@@ -17,10 +17,11 @@
 
 .btn {
   background-color: $secondary-color;
+  margin: 8px;
 }
 
 .fa {
-  color: white;
-  margin-left: 1em;
-  margin-top: 1em;
+  /*color: white;*/
+  /*margin-left: 1em;*/
+  /*margin-top: 1em;*/
 }

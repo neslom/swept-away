@@ -1,7 +1,9 @@
 @import "variables";
 
 #map {
-  height: 100%;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
   width: 100%;
 }
 
