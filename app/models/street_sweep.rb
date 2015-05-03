@@ -3,12 +3,10 @@ class StreetSweep < ActiveRecord::Base
     where(ward_id: ward_id).pluck(:section).uniq
   end
 
-  #def self.schedules(ward_id, section)
-    #where(ward_id: ward_id, section: section)
-  #end
-
-  def self.schedules(ward_id)
-    where(ward_id: ward_id)
+  def self.schedules(ward_section)
+    where(ward_section: ward_section).map do |schedule|
+      { month: schedule.print_month, days: schedule.print_days }
+    end
   end
 
   def print_days

@@ -3,25 +3,37 @@ $(document).ready(function() {
   var map = L.mapbox.map('map', 'neslom.a5edca51')
     .setView([41.854, -87.623], 10);
 
-  map.touchZoom.disable();
-  map.scrollWheelZoom.disable();
+  //map.touchZoom.disable();
+  //map.scrollWheelZoom.disable();
 
-  map.featureLayer.on("layeradd", function(e) {
-    var marker = e.layer;
-    var ward = marker.feature.properties.WARD;
-
-    var popupContent = "<a href=/street_sweeps/" + ward + " remote='true' class='ward-submit'>" + ward + "</a>";
-
-    marker.bindPopup(popupContent);
+  $("#map").click(function() {
+    if (!($(".map-tooltip").is(":hidden"))) {
+      $("#submit").toggle("block");
+    } else if ($(".map-tooltip").is(":hidden")) {
+      $("#submit").fadeOut();
+    }
   });
 
-  //$("#map").on("click", ".ward-submit", function() {
-    //$(".ward-submit").click(function() {
-      //var wardId = $(this).val();
-      //$.ajax({
-        //method: "GET",
-        //url: "street_sweeps/" + wardId
-      //});
-    //});
-  //});
+  $(".close").click(function() {
+    $("#submit").fadeOut();
+  });
+
+  $("#submit").click(function() {
+    var wardSection = $(".map-tooltip-content").text();
+    $.ajax({
+      method: "GET",
+      url: "street_sweeps/" + wardSection,
+      dataType: "json",
+      success: function(data) {
+        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule:</h4><br>")
+        printSchedule(data)
+      }
+    });
+  });
+
+  function printSchedule(data) {
+    data.forEach(function(e) {
+      return $("#dates").append("<h4>" + e.month + " " + e.days + "</h4><br>")
+    });
+  };
 });

@@ -1,0 +1,9 @@
+<% if !@schedules.nil? %>
+  <h3>Your area's street sweeping schedule:</h3>
+  <% @schedules.each do |schedule| %>
+    <ul>
+      <%= schedule.print_month %>
+      <%= schedule.print_days %><br>
+    </ul>
+  <% end %>
+<% end %>

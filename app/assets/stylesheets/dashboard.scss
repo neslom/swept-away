@@ -12,6 +12,7 @@ body {
 
 section {
   height: 100vh;
+  background-color: $primary-color;
 }
 
 h1 {
@@ -35,7 +36,17 @@ img.grayscale {
 }
 
 .navbar-bold li a:hover, .navbar-bold li.active {
-  background-color:#FC7022;
+  background-color:$orange;
+}
+
+.center {
+  margin-left: 500px;
+}
+
+#submit {
+  background-color: $orange;
+  height: 100%;
+  display: none;
 }
 
 #login {
