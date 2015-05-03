@@ -15,6 +15,18 @@ $(document).ready(function() {
     marker.bindPopup(popupContent);
   });
 
+  $("#map").click(function() {
+    if (!($(".map-tooltip").is(":hidden"))) {
+      $("#submit").toggle("block");
+    } else if ($(".map-tooltip").is(":hidden")) {
+      $("#submit").hide();
+    }
+  });
+
+  $(".close").click(function() {
+    $("#submit").hide();
+  });
+
  //.map-tooltip-content is what I need to grab for submission to controller
 
   //$("#map").on("click", ".ward-submit", function() {
