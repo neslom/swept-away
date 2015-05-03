@@ -15,6 +15,8 @@ $(document).ready(function() {
     marker.bindPopup(popupContent);
   });
 
+ //.map-tooltip-content is what I need to grab for submission to controller
+
   //$("#map").on("click", ".ward-submit", function() {
     //$(".ward-submit").click(function() {
       //var wardId = $(this).val();

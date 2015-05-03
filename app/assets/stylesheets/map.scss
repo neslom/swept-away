@@ -7,34 +7,12 @@
   width: 100%;
 }
 
-/*.custom-popup .leaflet-popup-content-wrapper {*/
-  /*background:$primary-color;*/
-  /*color:#fff;*/
-  /*font-size:16px;*/
-  /*line-height:14px;*/
+/*.leaflet-right .leaflet-control {*/
+/*position: relative;*/
+/*margin-right: 200px;*/
 /*}*/
-
-/*.custom-popup .leaflet-popup-content-wrapper a {*/
-  /*color:rgba(255,255,255,0.5);*/
-/*}*/
-
-/*.custom-popup .leaflet-popup-tip-container {*/
-  /*width:30px;*/
-  /*height:15px;*/
-/*}*/
-
-/*.custom-popup .leaflet-popup-tip {*/
-  /*border-left:15px solid transparent;*/
-  /*border-right:15px solid transparent;*/
-  /*border-top:15px solid $primary-color;*/
-/*}*/
-
-.leaflet-right .leaflet-control {
-  position: relative;
-  margin-right: 200px;
-}
 
 .map-tooltip {
-  background-color: red;
-
+  background-color: $orange;
+  content: "hey";
 }

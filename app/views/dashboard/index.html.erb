@@ -12,8 +12,12 @@
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav">
         <li><a href="#sec1">Section 1</a></li>
-        <li><a href="#sec2">Section 2</a></li>
       </ul>
+      <div class="center">
+      <ul class="nav navbar-nav">
+        <li><a href="#sec2" id="submit">Submit</a></li>
+      </ul>
+      </div>
         <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
           <li class="gravatar"><%= image_tag current_user.image_url, class: "img-square img-thumbnail home-image" %></li>
