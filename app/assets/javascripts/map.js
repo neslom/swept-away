@@ -20,15 +20,16 @@ $(document).ready(function() {
 
   $("#submit").click(function() {
     var wardSection = $(".map-tooltip-content").text();
+    $.when(
     $.ajax({
       method: "GET",
       url: "street_sweeps/" + wardSection,
       dataType: "json",
       success: function(data) {
-        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule:</h4><br>")
+        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><br>")
         printSchedule(data)
       }
-    });
+    })).then(showSchedule());
   });
 
   function printSchedule(data) {
@@ -36,4 +37,14 @@ $(document).ready(function() {
       return $("#dates").append("<h4>" + e.month + " " + e.days + "</h4><br>")
     });
   };
+
+  function showSchedule() {
+    $("#dates").fadeIn(800);
+  };
+
+  $(document).click(function() {
+    if ($("#dates").text().length > 0) {
+      $("#dates").text("")
+    }
+  });
 });

@@ -40,7 +40,21 @@ img.grayscale {
 }
 
 .center {
-  margin-left: 500px;
+  margin-left: 510px;
+}
+
+#schedule {
+  text-align: center;
+}
+
+#dates {
+  color: $primary-color;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsla(21, 100%, 50%, 0.75);
 }
 
 #submit {
