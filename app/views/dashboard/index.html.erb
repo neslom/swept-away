@@ -37,9 +37,11 @@
 
 <section id="map-home">
   <%= render template: "dashboard/map" %>
+    <div class="unobtrusive-flash-container"></div>
     <div id="dates" style="display:none"></div>
 </section>
 
-<section id="schedule">
+<section class="bottom">
   <div id="down"></div>
+  <%= render "alerts" %>
 </section>

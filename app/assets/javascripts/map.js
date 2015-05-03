@@ -26,7 +26,7 @@ $(document).ready(function() {
       url: "street_sweeps/" + wardSection,
       dataType: "json",
       success: function(data) {
-        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><br>")
+        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#down' class='signup scroll'>Sign up for alerts!</a>")
         printSchedule(data)
       }
     })).then(showSchedule());

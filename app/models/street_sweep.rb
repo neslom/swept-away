@@ -10,12 +10,12 @@ class StreetSweep < ActiveRecord::Base
   end
 
   def print_days
-    return "No data" if dates.nil?
+    return "" if dates.nil?
     dates.split(",").map(&:to_i).map(&:ordinalize).join(" and ")
   end
 
   def print_month
-    return "No data" if month.nil?
+    return "" if month.nil?
     Date::MONTHNAMES[self.month.to_i]
   end
 end

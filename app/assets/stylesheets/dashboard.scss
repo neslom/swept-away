@@ -40,11 +40,19 @@ img.grayscale {
 }
 
 .center {
-  margin-left: 510px;
+  margin-left: 37em;
 }
 
-#schedule {
+.bottom {
+  position: relative;
+}
+
+.alerts {
   text-align: center;
+  height: auto;
+  margin: auto;
+  padding: 20em;
+  width: 50%;
 }
 
 #dates {
