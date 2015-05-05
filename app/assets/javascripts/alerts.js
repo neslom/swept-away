@@ -6,8 +6,8 @@ $(document).ready(function() {
       url: "/alerts/welcome",
       dataType: "json",
       data: { phoneNumber: phoneNumber },
-      success: function(data) { console.log(data) },
-      fail: function() { alert("Something went wrong") }
+      success: function(data) { alert(data.message) },
+      error: function(data) { alert(data.responseJSON.message) }
     });
   });
 });

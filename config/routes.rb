@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   post '/alerts/welcome', to: 'alerts#welcome'
 
-  get '/users/:id', to: 'users#show'
+  get '/users/:id', to: 'users#show', as: 'users'
 end
