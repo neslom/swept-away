@@ -5,5 +5,11 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
-  helper_method :current_user
+  def logged_in?
+    if !current_user
+      respond_with({ message: "Please login first." }, status: 400, location: root_path)
+    end
+  end
+
+  helper_method :current_user, :logged_in?
 end
