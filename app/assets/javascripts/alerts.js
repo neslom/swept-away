@@ -7,7 +7,15 @@ $(document).ready(function() {
       dataType: "json",
       data: { phoneNumber: phoneNumber },
       success: function(data) { alert(data.message) },
-      error: function(data) { debugger;alert(data.responseJSON.message) }
+      error: function(data) { errorMessages(data) }
     });
   });
+
+  function errorMessages(data) {
+    if (data.responseJSON !== undefined) {
+      alert(data.responseJSON.message);
+    } else {
+      alert("Status: " + data.status + ". " + data.statusText);
+    };
+  };
 });
