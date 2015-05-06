@@ -6,17 +6,28 @@ $(document).ready(function() {
       url: "/alerts/welcome",
       dataType: "json",
       data: { phoneNumber: phoneNumber },
-      success: function(data) { alert(data.message) },
+      success: function(data) {
+        $.alert({
+          title: "Welcome!",
+          content: data.message
+        })
+      },
       error: function(data) { errorMessages(data) }
     });
   });
-
-  function errorMessages(data) {
-    if (data.responseJSON !== undefined) {
-      alert(data.responseJSON.message);
-    } else {
-      alert("Status: " + data.status + ". " + data.statusText);
-    };
-  };
-
 });
+
+function errorMessages(data) {
+  if (data.responseJSON !== undefined) {
+    $.alert({
+      title: "Oops",
+      content: data.responseJSON.message
+    })
+  } else {
+    $.alert({
+      title: "Status " + data.status + "... something went wrong",
+      content: data.statusText
+    })
+  };
+  $("body").stop();
+};

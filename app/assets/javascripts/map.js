@@ -34,9 +34,9 @@ $(document).ready(function() {
                   content: "Receive alerts for " + wardSection + "?",
                   confirm: function() {
                     userSections(wardSection)
-                    $("body").animate({
-                      scrollTop: $("#down").offset().top
-                    }, 1500)
+                      $("body").animate({
+                        scrollTop: $("#down").offset().top
+                      }, 1500)
                   },
                   cancel: function(){}
                 });
@@ -66,7 +66,10 @@ $(document).ready(function() {
       method: "POST",
       url: "user_sections",
       dataType: "json",
-      data: { wardSection: wardSection }
+      data: { wardSection: wardSection },
+      error: function(data) {
+        errorMessages(data)
+      }
     });
   }
 });

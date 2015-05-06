@@ -12,6 +12,6 @@ class StreetSweepsController < ApplicationController
     if ss
       current_user.street_sweeps << ss
     end
-    render nothing: true, status: :ok
+    respond_with({}, status: 200, location: root_path)
   end
 end

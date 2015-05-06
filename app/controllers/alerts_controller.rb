@@ -11,12 +11,4 @@ class AlertsController < ApplicationController
       respond_with({message: "Something went wrong."}, status: 400)
     end
   end
-
-  private
-
-  def logged_in?
-    if !current_user
-      respond_with({message: "Please login first"}, status: 400, location: root_path)
-    end
-  end
 end
