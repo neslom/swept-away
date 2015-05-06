@@ -40,7 +40,29 @@ img.grayscale {
 }
 
 .center {
-  margin-left: 500px;
+  margin-left: 37em;
+}
+
+.bottom {
+  position: relative;
+}
+
+.alerts {
+  text-align: center;
+  height: auto;
+  margin: auto;
+  padding: 20em;
+  width: 75%;
+}
+
+#dates {
+  color: $primary-color;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsla(21, 100%, 50%, 0.75);
 }
 
 #submit {

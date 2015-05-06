@@ -15,7 +15,7 @@
       </ul>
       <div class="center">
       <ul class="nav navbar-nav">
-        <li><a href="#down" id="submit" class="scroll">Submit</a></li>
+        <li><a href="#" id="submit">Submit</a></li>
       </ul>
       </div>
         <ul class="nav navbar-nav navbar-right">
@@ -37,10 +37,11 @@
 
 <section id="map-home">
   <%= render template: "dashboard/map" %>
+    <div class="unobtrusive-flash-container"></div>
+    <div id="dates" style="display:none"></div>
 </section>
 
-<section id="schedule">
-  <div id="down">
-    <div id="dates"></div>
-  </div>
+<section class="bottom">
+  <div id="down"></div>
+  <%= render "alerts" %>
 </section>

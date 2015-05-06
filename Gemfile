@@ -21,6 +21,7 @@ gem 'unobtrusive_flash', '>=3'
 gem 'faraday'
 gem 'bootstrap_form'
 gem 'responders'
+gem 'twilio-ruby'
 
 group :development, :test do
   gem 'byebug'
