@@ -1,4 +1,7 @@
 class StreetSweep < ActiveRecord::Base
+  has_many :user_sections
+  has_many :users, through: :user_sections
+
   def self.sections_by_ward(ward_id)
     where(ward_id: ward_id).pluck(:section).uniq
   end

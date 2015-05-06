@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20150506200607) do
 
   create_table "user_sections", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "street_sweeps_id"
+    t.integer "street_sweep_id"
   end
 
-  add_index "user_sections", ["street_sweeps_id"], name: "index_user_sections_on_street_sweeps_id", using: :btree
+  add_index "user_sections", ["street_sweep_id"], name: "index_user_sections_on_street_sweep_id", using: :btree
   add_index "user_sections", ["user_id"], name: "index_user_sections_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
