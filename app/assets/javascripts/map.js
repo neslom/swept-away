@@ -23,18 +23,22 @@ $(document).ready(function() {
     $.when(
         $.ajax({
           method: "GET",
-          url: "street_sweeps/" + wardSection,
+          url: "schedule/" + wardSection,
           dataType: "json",
           success: function(data) {
-            $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#down' class='signup scroll'>Sign up for alerts!</a>")
+            $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#' class='signup'>Sign up for alerts!</a>")
               printSchedule(data)
               $(".signup").click(function() {
-                $.alert({
-                  title: "Alert!",
-                  content: "Simple alert!",
+                $.confirm({
+                  title: "Street Sweep Alerts",
+                  content: "Receive alerts for " + wardSection + "?",
                   confirm: function() {
-                    alert('yolo');
-                  }
+                    userSections(wardSection)
+                    $("body").animate({
+                      scrollTop: $("#down").offset().top
+                    }, 1500)
+                  },
+                  cancel: function(){}
                 });
               })
           }
@@ -56,4 +60,13 @@ $(document).ready(function() {
       $("#dates").text("")
     }
   });
+
+  function userSections(wardSection) {
+    $.ajax({
+      method: "POST",
+      url: "user_sections",
+      dataType: "json",
+      data: { wardSection: wardSection }
+    });
+  }
 });
