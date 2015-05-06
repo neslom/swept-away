@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  resources :street_sweeps, only: [:show]
+  get '/schedule/:id', to: 'street_sweeps#schedule', as: 'schedule'
+
+  post '/user_sections', to: 'street_sweeps#user_sections'
 
   post '/alerts/welcome', to: 'alerts#welcome'
 
