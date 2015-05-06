@@ -7,7 +7,7 @@ $(document).ready(function() {
       dataType: "json",
       data: { phoneNumber: phoneNumber },
       success: function(data) { alert(data.message) },
-      error: function(data) { alert(data.responseJSON.message) }
+      error: function(data) { debugger;alert(data.responseJSON.message) }
     });
   });
 });
