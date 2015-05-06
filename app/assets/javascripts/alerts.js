@@ -8,7 +8,7 @@ $(document).ready(function() {
       data: { phoneNumber: phoneNumber },
       success: function(data) {
         $.alert({
-          title: "Welcome!",
+          title: "Thanks!",
           content: data.message
         })
       },
