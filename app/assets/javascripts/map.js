@@ -21,15 +21,18 @@ $(document).ready(function() {
   $("#submit").click(function() {
     var wardSection = $(".map-tooltip-content").text();
     $.when(
-    $.ajax({
-      method: "GET",
-      url: "street_sweeps/" + wardSection,
-      dataType: "json",
-      success: function(data) {
-        $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#down' class='signup scroll'>Sign up for alerts!</a>")
-        printSchedule(data)
-      }
-    })).then(showSchedule());
+        $.ajax({
+          method: "GET",
+          url: "street_sweeps/" + wardSection,
+          dataType: "json",
+          success: function(data) {
+            $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#down' class='signup scroll'>Sign up for alerts!</a>")
+              printSchedule(data)
+              $(".signup").click(function() {
+                confirm("Receive alerts for section " + wardSection + "?")
+              })
+          }
+        })).then(showSchedule());
   });
 
   function printSchedule(data) {
