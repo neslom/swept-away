@@ -29,7 +29,13 @@ $(document).ready(function() {
             $("#dates").append("<h3>Ward " + wardSection + "'s street sweeping schedule</h4><a href='#down' class='signup scroll'>Sign up for alerts!</a>")
               printSchedule(data)
               $(".signup").click(function() {
-                confirm("Receive alerts for section " + wardSection + "?")
+                $.alert({
+                  title: "Alert!",
+                  content: "Simple alert!",
+                  confirm: function() {
+                    alert('yolo');
+                  }
+                });
               })
           }
         })).then(showSchedule());
