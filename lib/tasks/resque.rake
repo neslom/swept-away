@@ -18,5 +18,5 @@ require 'resque/tasks'
 #end
 
 namespace :resque do
-  task :preload => :environment
+  task :setup => :environment
 end

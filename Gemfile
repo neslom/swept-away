@@ -23,6 +23,7 @@ gem 'bootstrap_form'
 gem 'responders'
 gem 'twilio-ruby'
 gem 'resque', '~> 1.22.0', require: 'resque/server'
+gem 'redis'
 gem 'puma'
 
 group :development, :test do
