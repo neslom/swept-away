@@ -25,6 +25,7 @@ gem 'twilio-ruby'
 gem 'resque', require: 'resque/server'
 gem 'resque-scheduler'
 gem 'puma'
+gem 'redis'
 
 group :development, :test do
   gem 'byebug'

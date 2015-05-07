@@ -298,6 +298,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.0)
   rails_12factor
+  redis
   responders
   resque
   resque-scheduler
