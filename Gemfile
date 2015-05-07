@@ -22,7 +22,7 @@ gem 'faraday'
 gem 'bootstrap_form'
 gem 'responders'
 gem 'twilio-ruby'
-gem 'resque'
+gem 'resque', require: 'resque/server'
 gem 'resque-scheduler'
 
 group :development, :test do
