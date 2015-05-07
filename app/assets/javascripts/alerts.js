@@ -9,7 +9,8 @@ $(document).ready(function() {
       success: function(data) {
         $.alert({
           title: "Thanks!",
-          content: data.message
+          content: data.message,
+          animationSpeed: 500
         })
       },
       error: function(data) { errorMessages(data) }
