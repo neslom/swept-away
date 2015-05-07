@@ -24,7 +24,6 @@ gem 'responders'
 gem 'twilio-ruby'
 gem 'resque', '~> 1.22.0', require: 'resque/server'
 gem 'puma'
-gem 'redis'
 
 group :development, :test do
   gem 'byebug'
