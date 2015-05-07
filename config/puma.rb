@@ -11,8 +11,8 @@ environment ENV['RACK_ENV'] || 'development'
 on_worker_boot do
   # Worker specific setup for Rails 4.1+
   # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
-  if defined?(Resque)
-    Resque.redis = ENV["<redis-uri>"] || "redis://127.0.0.1:6379"
-  end
+  #if defined?(Resque)
+    #Resque.redis = ENV["<redis-uri>"] || "redis://127.0.0.1:6379"
+  #end
   ActiveRecord::Base.establish_connection
 end
