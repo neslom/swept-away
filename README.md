@@ -4,6 +4,8 @@ Street Sweep is a personal project that interacts with the City of Chicago's pub
 
 The app allows users to select their location from a map, and sign up for text alerts as to when their street is being swept.
 
+My focus was on interacting with open government data, OAuth, and creating a seamless user experience backed by jQuery.
+
 [Find It Here on Heroku](https://salty-stream-5695.herokuapp.com/)
 
 [![Build Status](https://travis-ci.org/neslom/swept-away.svg?branch=master)](https://travis-ci.org/neslom/swept-away)
